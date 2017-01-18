@@ -8,3 +8,32 @@ if (computerChoice < 0.34) {
 	computerChoice = "scissors";
 } console.log("Computer: " + computerChoice);
 
+var compare = function(userChoice, computerChoice){
+    if (userChoice === computerChoice){
+        return "The result is a tie!";
+    }else if (userChoice === "rock"){
+        if (computerChoice === "scissors"){
+            return "rock wins";
+        }
+        else {
+            return "paper wins";
+        }
+    }
+    else if (userChoice === "paper"){
+        if (computerChoice === "rock"){
+            return "paper wins";
+        }
+        else {
+            return "scissors wins";
+        }
+    }
+    else if (userChoice === "scissors"){
+        if (computerChoice === "paper"){
+            return "scissors wins";
+        }
+        else {
+            return "rock wins";
+        }
+    }
+}
+compare(userChoice, computerChoice);
